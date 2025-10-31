@@ -1,0 +1,7 @@
+{
+  "name": "Ví Điện Tử Sinh Lời",
+  "description": "Một ứng dụng ví điện tử mô phỏng với đầy đủ các chức năng cơ bản như chuyển tiền, xem lịch sử giao dịch và một tính năng độc đáo là tự động sinh lời theo thời gian có thể cấu hình.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

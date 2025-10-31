@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ví Điện Tử Sinh Lời</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-primary-50: 239 246 255;
+        --color-primary-100: 219 234 254;
+        --color-primary-200: 191 219 254;
+        --color-primary-300: 147 197 253;
+        --color-primary-400: 96 165 250;
+        --color-primary-500: 59 130 246;
+        --color-primary-600: 37 99 235;
+        --color-primary-700: 29 78 216;
+        --color-primary-800: 30 64 175;
+        --color-primary-900: 30 58 138;
+        --color-primary-950: 23 37 84;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': {
+                '50': 'rgb(var(--color-primary-50) / <alpha-value>)',
+                '100': 'rgb(var(--color-primary-100) / <alpha-value>)',
+                '200': 'rgb(var(--color-primary-200) / <alpha-value>)',
+                '300': 'rgb(var(--color-primary-300) / <alpha-value>)',
+                '400': 'rgb(var(--color-primary-400) / <alpha-value>)',
+                '500': 'rgb(var(--color-primary-500) / <alpha-value>)',
+                '600': 'rgb(var(--color-primary-600) / <alpha-value>)',
+                '700': 'rgb(var(--color-primary-700) / <alpha-value>)',
+                '800': 'rgb(var(--color-primary-800) / <alpha-value>)',
+                '900': 'rgb(var(--color-primary-900) / <alpha-value>)',
+                '950': 'rgb(var(--color-primary-950) / <alpha-value>)',
+              },
+              'profit': '#10B981',
+              'expense': '#F97316'
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'fade-in-up': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(10px)'
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)'
+                },
+              },
+              'scale-in': {
+                '0%': { transform: 'scale(0.5)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              'fade-in-right': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateX(20px)'
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateX(0)'
+                },
+              },
+              'fade-out-right': {
+                '0%': {
+                  opacity: '1',
+                  transform: 'translateX(0)'
+                },
+                '100%': {
+                  opacity: '0',
+                  transform: 'translateX(20px)'
+                },
+              },
+              'balance-update': {
+                '0%, 100%': {
+                  transform: 'scale(1)',
+                },
+                '50%': {
+                  transform: 'scale(1.08)',
+                },
+              },
+              'bounce': {
+                '0%, 100%': {
+                  transform: 'translateY(-25%)',
+                  animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+                },
+                '50%': {
+                  transform: 'translateY(0)',
+                  animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+                }
+              },
+              'slide-in-from-right': {
+                '0%': { transform: 'translateX(30px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              'slide-in-from-left': {
+                '0%': { transform: 'translateX(-30px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              'slide-in-from-bottom': {
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              'progress-bar': {
+                'from': { transform: 'scaleX(1)' },
+                'to': { transform: 'scaleX(0)' },
+              },
+            },
+            animation: {
+              'fade-in': 'fade-in 0.2s ease-out forwards',
+              'fade-in-up': 'fade-in-up 0.3s ease-out forwards',
+              'scale-in': 'scale-in 0.3s ease-out forwards',
+              'fade-in-right': 'fade-in-right 0.3s ease-out forwards',
+              'fade-out-right': 'fade-out-right 0.3s ease-in forwards',
+              'balance-update': 'balance-update 0.4s ease-in-out',
+              'bounce': 'bounce 1s infinite',
+              'slide-in-from-right': 'slide-in-from-right 0.3s ease-out forwards',
+              'slide-in-from-left': 'slide-in-from-left 0.3s ease-out forwards',
+              'slide-in-from-bottom': 'slide-in-from-bottom 0.3s ease-out forwards',
+              'progress-bar': 'progress-bar 10s linear forwards',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
